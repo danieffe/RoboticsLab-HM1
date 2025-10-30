@@ -53,7 +53,7 @@ where `<value>` can be `position` for the position controller, or `trajectory` f
 >
 > You can change the velocities in two ways:
 >
-> 1.  **Configuration File:** Set the velocity and acceleration parameters within the controller's config file (e.g., `armando_controller/config/trajectory_controller.yaml`).
-> 2.  **ROS 2 Topic:** Send commands with the desired velocity values using a dedicated ROS 2 node or from the terminal via `ros2 topic pub` to the controller's topic.
+> 1.  **Configuration File:** Set the velocity and acceleration parameters within the controller's config file.
+> 2.  **ROS 2 Topic:** Send commands with the desired velocity values using a dedicated ROS 2 node or from the terminal via `ros2 topic pub` to the `/joint_trajectory_controller/joint_trajectory` topic.
 >
 > This allows you to adapt the arm's movement speed according to your simulation or testing requirements.
