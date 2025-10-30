@@ -44,3 +44,16 @@ To launch the subscriber and the publisher node you have to run:
 ros2 run armando_controller arm_controller_node --ros-args -p controller_type:=<value>
 ```
 where `<value>` can be `position` for the position controller, or `trajectory` for the trajectory controller.
+
+## 📝 Additional Notes
+
+> **Note: Manipulator Not Moving?**
+>
+> By default, the velocities for the trajectory controller are set to `0`, so the manipulator will not move until they are manually defined.
+>
+> You can change the velocities in two ways:
+>
+> 1.  **Configuration File:** Set the velocity and acceleration parameters within the controller's config file (e.g., `armando_controller/config/trajectory_controller.yaml`).
+> 2.  **ROS 2 Topic:** Send commands with the desired velocity values using a dedicated ROS 2 node or from the terminal via `ros2 topic pub` to the controller's topic.
+>
+> This allows you to adapt the arm's movement speed according to your simulation or testing requirements.
